@@ -84,6 +84,9 @@
 		4613FE931D3D0326002A8FCD /* E_LegalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_LegalUITests.swift; sourceTree = "<group>"; };
 		4613FE951D3D0326002A8FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462AF1C11D3D1645004D1291 /* muli.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = muli.regular.ttf; sourceTree = "<group>"; };
+		462AF1CA1D3D2882004D1291 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		462AF1D11D3D3277004D1291 /* UILabelFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelFontClass.swift; sourceTree = "<group>"; };
+		462AF1D51D3D3694004D1291 /* UIButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
 		462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFontClass.swift; sourceTree = "<group>"; };
 		4689A5031D3D450700476582 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4689A5061D3D4FD700476582 /* ApplicationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationHelper.swift; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				4613FE7A1D3D0326002A8FCD /* Assets.xcassets */,
 				4613FE7C1D3D0326002A8FCD /* LaunchScreen.storyboard */,
 				4613FE7F1D3D0326002A8FCD /* Info.plist */,
+				462AF1D11D3D3277004D1291 /* UILabelFontClass.swift */,
+				462AF1D51D3D3694004D1291 /* UIButtonClass.swift */,
 			);
 			path = "E-Legal";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				46F0E0801D3FADFA00874871 /* LeftMenuViewController */,
 				46F0E08A1D3FC30600874871 /* HomeViewController */,
 				4609AD021D40EEFA002341C0 /* ProfileViewController */,
+				462AF1CA1D3D2882004D1291 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

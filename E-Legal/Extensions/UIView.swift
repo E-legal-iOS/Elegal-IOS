@@ -26,8 +26,7 @@ import UIKit
    @IBInspectable var borderWidth: CGFloat {
       set {
          layer.borderWidth = newValue
-      }
-      get {
+      } get {
          return layer.borderWidth
       }
    }
