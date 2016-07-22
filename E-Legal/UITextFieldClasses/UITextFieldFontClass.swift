@@ -10,18 +10,15 @@ import UIKit
 
 class UITextFieldFontClass: UITextField {
 
-    
-    override func awakeFromNib() {
-        let size = UIScreen.mainScreen().bounds.width/414 * font!.pointSize
-        font = UIFont(name: (font?.fontName)!, size:size)
-    }
-    
-    /*
+   override func awakeFromNib() {
+      let size = UIScreen.mainScreen().bounds.width / 414 * font!.pointSize
+      font = UIFont(name: (font?.fontName)!, size: size)
+   }
+   /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+    // Drawing code
     }
     */
-
 }
