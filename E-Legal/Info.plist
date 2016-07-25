@@ -6,6 +6,8 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SF-UI-Display-Semibold.otf</string>
+		<string>SF-UI-Display-Thin.otf</string>
 		<string>Muli-Bold.ttf</string>
 		<string>PlayfairDisplay-Bold.ttf</string>
 		<string>muli.regular.ttf</string>

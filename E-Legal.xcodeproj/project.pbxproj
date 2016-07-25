@@ -24,6 +24,7 @@
 		4613FE941D3D0326002A8FCD /* E_LegalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613FE931D3D0326002A8FCD /* E_LegalUITests.swift */; };
 		462AF1C21D3D1645004D1291 /* muli.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462AF1C11D3D1645004D1291 /* muli.regular.ttf */; };
 		462AF1D81D3D3F98004D1291 /* UITextFieldFontClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */; };
+		466CD51D1D4657FA00627A87 /* DefineMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CD51C1D4657FA00627A87 /* DefineMacros.swift */; };
 		4689A5041D3D450700476582 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689A5031D3D450700476582 /* UIView.swift */; };
 		4689A5071D3D4FD700476582 /* ApplicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689A5061D3D4FD700476582 /* ApplicationHelper.swift */; };
 		4689A50B1D3E536A00476582 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */; };
@@ -36,6 +37,11 @@
 		46F0E0871D3FBA3400874871 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E0861D3FBA3400874871 /* UserInfoTableViewCell.swift */; };
 		46F0E0891D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E0881D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift */; };
 		46F0E08C1D3FC32000874871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E08B1D3FC32000874871 /* HomeViewController.swift */; };
+		46F4DC871D46302600EFFA82 /* CreateCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4DC861D46302600EFFA82 /* CreateCaseViewController.swift */; };
+		46F4DC891D46358400EFFA82 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46F4DC881D46358400EFFA82 /* SF-UI-Display-Thin.otf */; };
+		46F4DC8C1D4636E700EFFA82 /* UITextViewFontClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4DC8B1D4636E700EFFA82 /* UITextViewFontClass.swift */; };
+		46F4DC8E1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46F4DC8D1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf */; };
+		46F4DC911D46452200EFFA82 /* CreateCaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4DC901D46452200EFFA82 /* CreateCaseTableViewCell.swift */; };
 		4E492D944F4E7C2CF47A46E1 /* Pods_E_Legal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E4AB212B5FC5B7175CFD46 /* Pods_E_Legal.framework */; };
 		797C3B4080BADB184CF41637 /* Pods_E_LegalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B9FF4ADE7AE1D279FD4C99 /* Pods_E_LegalTests.framework */; };
 		9141B73217FD96A383769E2E /* Pods_E_LegalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2A84A67B78E1B643BAA9F3 /* Pods_E_LegalUITests.framework */; };
@@ -88,6 +94,7 @@
 		462AF1D11D3D3277004D1291 /* UILabelFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelFontClass.swift; sourceTree = "<group>"; };
 		462AF1D51D3D3694004D1291 /* UIButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
 		462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFontClass.swift; sourceTree = "<group>"; };
+		466CD51C1D4657FA00627A87 /* DefineMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefineMacros.swift; sourceTree = "<group>"; };
 		4689A5031D3D450700476582 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4689A5061D3D4FD700476582 /* ApplicationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationHelper.swift; sourceTree = "<group>"; };
 		4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -100,6 +107,11 @@
 		46F0E0861D3FBA3400874871 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		46F0E0881D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		46F0E08B1D3FC32000874871 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		46F4DC861D46302600EFFA82 /* CreateCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCaseViewController.swift; sourceTree = "<group>"; };
+		46F4DC881D46358400EFFA82 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
+		46F4DC8B1D4636E700EFFA82 /* UITextViewFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewFontClass.swift; sourceTree = "<group>"; };
+		46F4DC8D1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
+		46F4DC901D46452200EFFA82 /* CreateCaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCaseTableViewCell.swift; sourceTree = "<group>"; };
 		576D8ECA99831862082DA3E2 /* Pods-E-LegalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-LegalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-LegalUITests/Pods-E-LegalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75E4AB212B5FC5B7175CFD46 /* Pods_E_Legal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Legal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C57F0A9D081830CE4F6E013 /* Pods-E-LegalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-LegalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-LegalTests/Pods-E-LegalTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4609AD081D40FD3A002341C0 /* Constants.swift */,
+				466CD51C1D4657FA00627A87 /* DefineMacros.swift */,
 			);
 			path = Contsants;
 			sourceTree = "<group>";
@@ -214,6 +227,7 @@
 		4613FE721D3D0326002A8FCD /* E-Legal */ = {
 			isa = PBXGroup;
 			children = (
+				46F4DC8A1D4636CF00EFFA82 /* UITextViewClasses */,
 				4609AD0A1D41092F002341C0 /* UILableClasses */,
 				4609AD0C1D41092F002341C0 /* UIButtonClasses */,
 				4609AD071D40FD22002341C0 /* Contsants */,
@@ -255,6 +269,8 @@
 		462AF1C01D3D1645004D1291 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				46F4DC8D1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf */,
+				46F4DC881D46358400EFFA82 /* SF-UI-Display-Thin.otf */,
 				46BA2F351D41443500894C92 /* Muli-Bold.ttf */,
 				4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */,
 				462AF1C31D3D184B004D1291 /* FontAwesomeKit */,
@@ -279,6 +295,7 @@
 				46F0E0801D3FADFA00874871 /* LeftMenuViewController */,
 				46F0E08A1D3FC30600874871 /* HomeViewController */,
 				4609AD021D40EEFA002341C0 /* ProfileViewController */,
+				46F4DC811D462FDD00EFFA82 /* CreateCaseController */,
 				462AF1CA1D3D2882004D1291 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -373,6 +390,31 @@
 				46F0E08B1D3FC32000874871 /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		46F4DC811D462FDD00EFFA82 /* CreateCaseController */ = {
+			isa = PBXGroup;
+			children = (
+				46F4DC861D46302600EFFA82 /* CreateCaseViewController.swift */,
+				46F4DC8F1D46450400EFFA82 /* UITableViewCells */,
+			);
+			path = CreateCaseController;
+			sourceTree = "<group>";
+		};
+		46F4DC8A1D4636CF00EFFA82 /* UITextViewClasses */ = {
+			isa = PBXGroup;
+			children = (
+				46F4DC8B1D4636E700EFFA82 /* UITextViewFontClass.swift */,
+			);
+			path = UITextViewClasses;
+			sourceTree = "<group>";
+		};
+		46F4DC8F1D46450400EFFA82 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				46F4DC901D46452200EFFA82 /* CreateCaseTableViewCell.swift */,
+			);
+			path = UITableViewCells;
 			sourceTree = "<group>";
 		};
 		CF4C5F16EC6E76C39D25ACC4 /* Frameworks */ = {
@@ -514,9 +556,11 @@
 				4689A50B1D3E536A00476582 /* PlayfairDisplay-Bold.ttf in Resources */,
 				4613FE7E1D3D0326002A8FCD /* LaunchScreen.storyboard in Resources */,
 				4609AD191D411AF8002341C0 /* EditProfileHeadeView.xib in Resources */,
+				46F4DC891D46358400EFFA82 /* SF-UI-Display-Thin.otf in Resources */,
 				4613FE7B1D3D0326002A8FCD /* Assets.xcassets in Resources */,
 				4613FE791D3D0326002A8FCD /* Main.storyboard in Resources */,
 				462AF1C21D3D1645004D1291 /* muli.regular.ttf in Resources */,
+				46F4DC8E1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,17 +715,21 @@
 				462AF1D81D3D3F98004D1291 /* UITextFieldFontClass.swift in Sources */,
 				46F0E07F1D3FA3D700874871 /* SSASideMenu.swift in Sources */,
 				46F0E08C1D3FC32000874871 /* HomeViewController.swift in Sources */,
+				46F4DC911D46452200EFFA82 /* CreateCaseTableViewCell.swift in Sources */,
 				4689A5111D3E731100476582 /* SignUpViewController.swift in Sources */,
 				4609AD111D410943002341C0 /* DeleteButton.swift in Sources */,
 				4609AD091D40FD3A002341C0 /* Constants.swift in Sources */,
 				4689A5041D3D450700476582 /* UIView.swift in Sources */,
 				46F0E0891D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift in Sources */,
 				46F0E0821D3FAE2600874871 /* LeftMenuViewController.swift in Sources */,
+				46F4DC8C1D4636E700EFFA82 /* UITextViewFontClass.swift in Sources */,
 				4689A5101D3E731100476582 /* ViewController.swift in Sources */,
 				4609AD1B1D411B17002341C0 /* EditProfileHeadeView.swift in Sources */,
 				4609AD041D40EF10002341C0 /* ProfileViewController.swift in Sources */,
 				4689A5071D3D4FD700476582 /* ApplicationHelper.swift in Sources */,
 				4609AD0F1D41092F002341C0 /* UIButtonClass.swift in Sources */,
+				46F4DC871D46302600EFFA82 /* CreateCaseViewController.swift in Sources */,
+				466CD51D1D4657FA00627A87 /* DefineMacros.swift in Sources */,
 				4609AD161D4111B0002341C0 /* DeleteButtonTableViewCell.swift in Sources */,
 				4609AD0E1D41092F002341C0 /* UILabelFontClass.swift in Sources */,
 			);
@@ -826,10 +874,15 @@
 			baseConfigurationReference = F7A4C326C18B221D505040C2 /* Pods-E-Legal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "E-Legal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TechCreatix.E-Legal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-Legal/ViewControllers/CreateCaseController/E-Legal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -838,10 +891,14 @@
 			baseConfigurationReference = 13C80293C702DFEB2D4EEFC8 /* Pods-E-Legal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "E-Legal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TechCreatix.E-Legal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-Legal/ViewControllers/CreateCaseController/E-Legal-Bridging-Header.h";
 			};
 			name = Release;
 		};
