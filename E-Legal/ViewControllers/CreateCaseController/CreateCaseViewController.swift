@@ -10,17 +10,20 @@ import UIKit
 
 class CreateCaseViewController: UIViewController {
 
-   @IBOutlet weak var buttonMenu: UIButton!
    @IBOutlet weak var tableView: UITableView!
    var createCaseCell: CreateCaseTableViewCell?
+
    override func viewDidLoad() {
       super.viewDidLoad()
       navigationController?.navigationBar.barTintColor = UIColor(red: 7 / 255, green: 134 / 255, blue: 231 / 255, alpha: 1.0)
-      buttonMenu.addTarget(self, action: #selector(SSASideMenu.presentLeftMenuViewController), forControlEvents: UIControlEvents.TouchUpInside)
       if let pickerView = view as? PickerViewClass {
          pickerView.pickerView.delegate = self
       }
       // Do any additional setup after loading the view.
+   }
+
+   @IBAction func showLeftMenu(sender: UIButton) {
+      presentLeftMenuViewController()
    }
 
    func donePicker() {

@@ -6,6 +6,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MYRIADPRO-REGULAR.OTF</string>
 		<string>SF-UI-Display-Regular.otf</string>
 		<string>SF-UI-Display-Semibold.otf</string>
 		<string>SF-UI-Display-Thin.otf</string>

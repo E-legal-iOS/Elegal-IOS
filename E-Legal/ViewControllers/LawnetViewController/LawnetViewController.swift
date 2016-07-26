@@ -1,5 +1,5 @@
 //
-//  CasesViewController.swift
+//  LawnetViewController.swift
 //  E-Legal
 //
 //  Created by Toqir Ahmad on 26/07/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CasesViewController: UIViewController {
+class LawnetViewController: UIViewController {
 
    @IBOutlet weak var searchBar: UISearchBar!
    @IBOutlet weak var tableView: UITableView!
@@ -27,9 +27,10 @@ class CasesViewController: UIViewController {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
    }
+
 }
 
-extension CasesViewController: UITableViewDelegate, UITableViewDataSource {
+extension LawnetViewController: UITableViewDelegate, UITableViewDataSource {
 
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
       return 1
@@ -40,12 +41,12 @@ extension CasesViewController: UITableViewDelegate, UITableViewDataSource {
    }
 
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let caseCell = tableView.dequeueReusableCellWithIdentifier("CaseTableCell", forIndexPath: indexPath) as! CasesTableViewCell
-      return caseCell
+      let lawnetTableCell = tableView.dequeueReusableCellWithIdentifier("LawnetTableCell", forIndexPath: indexPath) as! LawnetTableViewCell
+      return lawnetTableCell
    }
 }
 
-extension CasesViewController: UISearchBarDelegate {
+extension LawnetViewController: UISearchBarDelegate {
 
    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
 

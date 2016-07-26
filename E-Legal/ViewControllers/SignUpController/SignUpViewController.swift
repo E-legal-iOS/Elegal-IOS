@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class SignUpViewController: UIViewController {
 
    @IBOutlet weak var signUpTableView: UITableView!
@@ -39,11 +39,7 @@ class SignUpViewController: UIViewController {
    }
 
    @IBAction func createAccount (sender: UIButton) {
-
-      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
-      let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
-      appDelegate?.window?.rootViewController = viewController
+      signUpNewuser()
    }
 
    func dateOfBirthPicker () {
@@ -56,6 +52,32 @@ class SignUpViewController: UIViewController {
       let timeFormatter = NSDateFormatter()
       timeFormatter.dateFormat = "MM-dd-yyyy"
       signUpCell?.textFieldDateOfBirth.text = timeFormatter.stringFromDate(sender.date)
+   }
+
+   func signUpNewuser() {
+    let newUser = User()
+    
+      newUser.username = signUpCell?.textFieldName.text
+      newUser.password = signUpCell?.textFieldPassword.text
+      newUser.email = signUpCell?.textFieldemail.text
+
+      // Sign up the user asynchronously
+      newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+
+         if ((error) != nil) {
+            ApplicationHelper.showAlertView("Error", message: "\(error)", view: self)
+         } else {
+            ApplicationHelper.showAlertView("Success", message: "Signed Up", view: self)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+               print("Hello you are signed up")
+               let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
+               let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+               appDelegate?.window?.rootViewController = viewController
+
+            })
+         }
+      })
    }
 
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
