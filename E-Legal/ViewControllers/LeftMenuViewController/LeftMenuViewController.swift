@@ -74,7 +74,10 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
          sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile")
          sideMenuViewController?.hideMenuViewController()
       } else {
-
+        if indexPath.row == 0 {
+            sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CasesViewController")
+            sideMenuViewController?.hideMenuViewController()
+        }
       }
    }
 }

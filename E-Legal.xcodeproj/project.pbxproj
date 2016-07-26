@@ -24,6 +24,9 @@
 		4613FE941D3D0326002A8FCD /* E_LegalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613FE931D3D0326002A8FCD /* E_LegalUITests.swift */; };
 		462AF1C21D3D1645004D1291 /* muli.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462AF1C11D3D1645004D1291 /* muli.regular.ttf */; };
 		462AF1D81D3D3F98004D1291 /* UITextFieldFontClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */; };
+		466CD5201D478B1300627A87 /* CasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CD51F1D478B1300627A87 /* CasesViewController.swift */; };
+		466CD5221D478EB300627A87 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 466CD5211D478EB300627A87 /* SF-UI-Display-Regular.otf */; };
+		466CD5251D47930700627A87 /* CasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CD5241D47930700627A87 /* CasesTableViewCell.swift */; };
 		4689A5041D3D450700476582 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689A5031D3D450700476582 /* UIView.swift */; };
 		4689A5071D3D4FD700476582 /* ApplicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689A5061D3D4FD700476582 /* ApplicationHelper.swift */; };
 		4689A50B1D3E536A00476582 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */; };
@@ -84,10 +87,10 @@
 		4613FE931D3D0326002A8FCD /* E_LegalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_LegalUITests.swift; sourceTree = "<group>"; };
 		4613FE951D3D0326002A8FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		462AF1C11D3D1645004D1291 /* muli.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = muli.regular.ttf; sourceTree = "<group>"; };
-		462AF1CA1D3D2882004D1291 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		462AF1D11D3D3277004D1291 /* UILabelFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelFontClass.swift; sourceTree = "<group>"; };
-		462AF1D51D3D3694004D1291 /* UIButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
 		462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFontClass.swift; sourceTree = "<group>"; };
+		466CD51F1D478B1300627A87 /* CasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasesViewController.swift; sourceTree = "<group>"; };
+		466CD5211D478EB300627A87 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		466CD5241D47930700627A87 /* CasesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasesTableViewCell.swift; sourceTree = "<group>"; };
 		4689A5031D3D450700476582 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4689A5061D3D4FD700476582 /* ApplicationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationHelper.swift; sourceTree = "<group>"; };
 		4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -228,8 +231,6 @@
 				4613FE7A1D3D0326002A8FCD /* Assets.xcassets */,
 				4613FE7C1D3D0326002A8FCD /* LaunchScreen.storyboard */,
 				4613FE7F1D3D0326002A8FCD /* Info.plist */,
-				462AF1D11D3D3277004D1291 /* UILabelFontClass.swift */,
-				462AF1D51D3D3694004D1291 /* UIButtonClass.swift */,
 			);
 			path = "E-Legal";
 			sourceTree = "<group>";
@@ -255,6 +256,7 @@
 		462AF1C01D3D1645004D1291 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				466CD5211D478EB300627A87 /* SF-UI-Display-Regular.otf */,
 				46BA2F351D41443500894C92 /* Muli-Bold.ttf */,
 				4689A50A1D3E536A00476582 /* PlayfairDisplay-Bold.ttf */,
 				462AF1C31D3D184B004D1291 /* FontAwesomeKit */,
@@ -279,7 +281,7 @@
 				46F0E0801D3FADFA00874871 /* LeftMenuViewController */,
 				46F0E08A1D3FC30600874871 /* HomeViewController */,
 				4609AD021D40EEFA002341C0 /* ProfileViewController */,
-				462AF1CA1D3D2882004D1291 /* ViewController.swift */,
+				466CD51E1D478AFF00627A87 /* CasesViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +292,23 @@
 				462AF1D71D3D3F98004D1291 /* UITextFieldFontClass.swift */,
 			);
 			path = UITextFieldClasses;
+			sourceTree = "<group>";
+		};
+		466CD51E1D478AFF00627A87 /* CasesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				466CD51F1D478B1300627A87 /* CasesViewController.swift */,
+				466CD5231D4792EB00627A87 /* UITableViewCell */,
+			);
+			path = CasesViewController;
+			sourceTree = "<group>";
+		};
+		466CD5231D4792EB00627A87 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				466CD5241D47930700627A87 /* CasesTableViewCell.swift */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		4689A5021D3D44E700476582 /* Extensions */ = {
@@ -516,6 +535,7 @@
 				4609AD191D411AF8002341C0 /* EditProfileHeadeView.xib in Resources */,
 				4613FE7B1D3D0326002A8FCD /* Assets.xcassets in Resources */,
 				4613FE791D3D0326002A8FCD /* Main.storyboard in Resources */,
+				466CD5221D478EB300627A87 /* SF-UI-Display-Regular.otf in Resources */,
 				462AF1C21D3D1645004D1291 /* muli.regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,11 +695,13 @@
 				4609AD111D410943002341C0 /* DeleteButton.swift in Sources */,
 				4609AD091D40FD3A002341C0 /* Constants.swift in Sources */,
 				4689A5041D3D450700476582 /* UIView.swift in Sources */,
+				466CD5251D47930700627A87 /* CasesTableViewCell.swift in Sources */,
 				46F0E0891D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift in Sources */,
 				46F0E0821D3FAE2600874871 /* LeftMenuViewController.swift in Sources */,
 				4689A5101D3E731100476582 /* ViewController.swift in Sources */,
 				4609AD1B1D411B17002341C0 /* EditProfileHeadeView.swift in Sources */,
 				4609AD041D40EF10002341C0 /* ProfileViewController.swift in Sources */,
+				466CD5201D478B1300627A87 /* CasesViewController.swift in Sources */,
 				4689A5071D3D4FD700476582 /* ApplicationHelper.swift in Sources */,
 				4609AD0F1D41092F002341C0 /* UIButtonClass.swift in Sources */,
 				4609AD161D4111B0002341C0 /* DeleteButtonTableViewCell.swift in Sources */,
