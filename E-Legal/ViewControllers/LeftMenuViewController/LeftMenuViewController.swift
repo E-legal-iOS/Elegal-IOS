@@ -11,7 +11,7 @@ import UIKit
 class LeftMenuViewController: UIViewController {
 
    @IBOutlet weak var tableView: UITableView!
-   let isLawyer = true
+   let isLawyer = false
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
@@ -47,7 +47,7 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
       if indexPath.section == 0 {
          return 205
       } else {
-         return 70
+         return ApplicationHelper.getCellHeight(70, originalWidth: 414).height
       }
    }
 
@@ -74,10 +74,16 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
          sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile")
          sideMenuViewController?.hideMenuViewController()
       } else {
-        if indexPath.row == 0 {
+         switch indexPath.row {
+         case 0:
             sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CasesViewController")
             sideMenuViewController?.hideMenuViewController()
-        }
+         case 3:
+            sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateCaseViewController")
+            sideMenuViewController?.hideMenuViewController()
+         default:
+            break
+         }
       }
    }
 }
