@@ -13,28 +13,14 @@ class CreateCaseViewController: UIViewController {
    @IBOutlet weak var buttonMenu: UIButton!
    @IBOutlet weak var tableView: UITableView!
    var createCaseCell: CreateCaseTableViewCell?
-   var toolBar = UIToolbar()
-   var pickerView = UIPickerView()
    override func viewDidLoad() {
       super.viewDidLoad()
       navigationController?.navigationBar.barTintColor = UIColor(red: 7 / 255, green: 134 / 255, blue: 231 / 255, alpha: 1.0)
       buttonMenu.addTarget(self, action: #selector(SSASideMenu.presentLeftMenuViewController), forControlEvents: UIControlEvents.TouchUpInside)
+      if let pickerView = view as? PickerViewClass {
+         pickerView.pickerView.delegate = self
+      }
       // Do any additional setup after loading the view.
-      pickerView = UIPickerView(frame: CGRectMake(0, DefineMacros.SCREEN_HEIGHT - 200, DefineMacros.SCREEN_WIDTH, 200))
-      pickerView.backgroundColor = .whiteColor()
-      pickerView.showsSelectionIndicator = true
-      pickerView.delegate = self
-      pickerView.dataSource = self
-      toolBar.barStyle = UIBarStyle.Default
-      toolBar.translucent = true
-      toolBar.tintColor = UIColor(red: 76 / 255, green: 217 / 255, blue: 100 / 255, alpha: 1)
-      toolBar.sizeToFit()
-
-      let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CreateCaseViewController.donePicker))
-      let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-
-      toolBar.setItems([spaceButton, doneButton], animated: false)
-      toolBar.userInteractionEnabled = true
    }
 
    func donePicker() {
@@ -64,8 +50,10 @@ extension CreateCaseViewController: UITableViewDelegate, UITableViewDataSource {
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       createCaseCell = tableView.dequeueReusableCellWithIdentifier("CreateCaseTableCell", forIndexPath: indexPath) as? CreateCaseTableViewCell
       guard let createCaseCell = createCaseCell else { return UITableViewCell() }
-      createCaseCell.textFieldChooseCategory.inputView = pickerView
-      createCaseCell.textFieldChooseCategory.inputAccessoryView = toolBar
+      if let pickerView = view as? PickerViewClass {
+         createCaseCell.textFieldChooseCategory.inputView = pickerView.pickerView
+         createCaseCell.textFieldChooseCategory.inputAccessoryView = pickerView.toolBar
+      }
       return createCaseCell
    }
 }
@@ -105,7 +93,7 @@ extension CreateCaseViewController: UITextViewDelegate {
          } else {
             textView.text = "Description"
          }
-        textView.textColor = UIColor(red: 154/255, green: 198/255, blue: 231/255, alpha: 1.0)
+         textView.textColor = UIColor(red: 154 / 255, green: 198 / 255, blue: 231 / 255, alpha: 1.0)
       }
    }
 }

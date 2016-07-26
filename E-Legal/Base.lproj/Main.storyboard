@@ -1166,7 +1166,7 @@
                         <viewControllerLayoutGuide type="top" id="wEh-gQ-Xtm"/>
                         <viewControllerLayoutGuide type="bottom" id="ikF-1M-aSz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d67-oR-Vbv">
+                    <view key="view" contentMode="scaleToFill" id="d67-oR-Vbv" customClass="PickerViewClass" customModule="E_Legal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
