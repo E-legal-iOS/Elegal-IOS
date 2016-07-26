@@ -11,7 +11,7 @@ import UIKit
 
 class ApplicationHelper: NSObject {
 
-   func animateTextFieldUp(up: Bool, view: UIView, distance: CGFloat, duration: Double) {
+   class func animateTextFieldUp(up: Bool, view: UIView, distance: CGFloat, duration: Double) {
 
       let movementDistance = distance
       let movementDuration = duration
@@ -23,4 +23,9 @@ class ApplicationHelper: NSObject {
       UIView.commitAnimations()
    }
 
+   class func getCellHeight(originalHeight: Int, originalWidth: Int) -> CGSize {
+      let height = (originalHeight * Int(DefineMacros.SCREEN_WIDTH)) / originalWidth
+      let size = CGSizeMake(DefineMacros.SCREEN_WIDTH, CGFloat(height))
+      return size
+   }
 }
