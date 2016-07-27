@@ -54,7 +54,7 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       if indexPath.section == 0 {
          let userInfoCell = tableView.dequeueReusableCellWithIdentifier("UserInfoCell", forIndexPath: indexPath) as! UserInfoTableViewCell
-         userInfoCell.labelUserName.text = "Toqeer Ahmad"
+         userInfoCell.labelUserName.text = "Biatrichi Moreno"
          userInfoCell.labelUserType.text = "lawer".uppercaseString
          return userInfoCell
       } else {
@@ -75,6 +75,12 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
          sideMenuViewController?.hideMenuViewController()
       } else {
          switch indexPath.row {
+         case 0:
+            sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CasesViewController")
+            sideMenuViewController?.hideMenuViewController()
+         case 1:
+            sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LawnetViewController")
+            sideMenuViewController?.hideMenuViewController()
          case 3:
             sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateCaseViewController")
             sideMenuViewController?.hideMenuViewController()
