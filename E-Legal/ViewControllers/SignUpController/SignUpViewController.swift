@@ -142,9 +142,11 @@ extension SignUpViewController: UITextFieldDelegate {
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
-      signUpCell?.ImageViewUser.image = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
-      signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)
-      signUpCell?.buttonAddPhoto.setTitle("", forState: UIControlState.Normal)
+      if let choosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+         signUpCell?.ImageViewUser.image = choosenImage
+         signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)
+         signUpCell?.buttonAddPhoto.setTitle("", forState: UIControlState.Normal)
+      }
       dismissViewControllerAnimated(true, completion: nil)
    }
 }
