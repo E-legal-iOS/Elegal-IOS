@@ -12,7 +12,6 @@ class UserInfoTableViewCell: UITableViewCell {
    @IBOutlet weak var labelUserName: UILabel!
    @IBOutlet weak var labelUserType: UILabel!
    @IBOutlet weak var imageViewUser: UIImageView!
-   @IBOutlet weak var buttonEditUserImage: UIButton!
    @IBOutlet weak var textFieldUserInfo: UITextField!
 
 }

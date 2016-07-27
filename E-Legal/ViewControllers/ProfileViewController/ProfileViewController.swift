@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
 
    @IBOutlet weak var tableView: UITableView!
    let isLawyer = false
+   var editUserImageCell: EditUserProfilePhotoTableViewCell?
 
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -24,14 +25,51 @@ class ProfileViewController: UIViewController {
       presentLeftMenuViewController()
    }
 
-   func editUserImage(indexPath: NSIndexPath) -> UserInfoTableViewCell {
-      let editUserImageCell = tableView.dequeueReusableCellWithIdentifier("EditUserImageCell", forIndexPath: indexPath) as! UserInfoTableViewCell
-      editUserImageCell.buttonEditUserImage.addTarget(self, action: #selector(ProfileViewController.editImage(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-      return editUserImageCell;
+   func editUserImage(indexPath: NSIndexPath) -> UITableViewCell {
+      editUserImageCell = tableView.dequeueReusableCellWithIdentifier("EditUserImageCell") as? EditUserProfilePhotoTableViewCell
+      guard editUserImageCell != nil else { return UITableViewCell() }
+      editUserImageCell!.buttonEditUserImage.addTarget(self, action: #selector(ProfileViewController.editImage(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+      return editUserImageCell!;
    }
 
    @IBAction func editImage (sender: UIButton) {
+      let alert: UIAlertController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+      let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openCamera()
+      }
+      let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openGallary()
+      }
+      let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+         UIAlertAction in
+      }
 
+      alert.addAction(cameraAction)
+      alert.addAction(gallaryAction)
+      alert.addAction(cancelAction)
+      presentViewController(alert, animated: true, completion: nil)
+   }
+
+   func openCamera()
+   {
+      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+         let picker = UIImagePickerController()
+         picker.delegate = self
+         picker.sourceType = UIImagePickerControllerSourceType.Camera
+         presentViewController(picker, animated: true, completion: nil)
+      } else {
+         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+      }
+   }
+
+   func openGallary()
+   {
+      let picker = UIImagePickerController()
+      picker.delegate = self
+      picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+      presentViewController(picker, animated: true, completion: nil)
    }
 
    func createUserInfoTableViewCell(indexPath: NSIndexPath) -> UserInfoTableViewCell {
@@ -195,3 +233,14 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
       }
    }
 }
+
+extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+      if let chosenImage = (info[UIImagePickerControllerOriginalImage] as? UIImage) {
+         editUserImageCell?.buttonEditUserImage.setBackgroundImage(chosenImage, forState: UIControlState.Normal)
+      }
+      dismissViewControllerAnimated(true, completion: nil)
+   }
+}
+

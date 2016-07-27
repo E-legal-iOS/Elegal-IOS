@@ -970,7 +970,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EditUserImageCell" rowHeight="126" id="3Vq-xX-iDw" customClass="UserInfoTableViewCell" customModule="E_Legal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EditUserImageCell" rowHeight="126" id="3Vq-xX-iDw" customClass="EditUserProfilePhotoTableViewCell" customModule="E_Legal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Vq-xX-iDw" id="lMz-Vo-REU">
@@ -992,7 +992,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="buttonEditUserImage" destination="Ufl-iJ-JOJ" id="G9v-nf-auq"/>
+                                            <outlet property="buttonEditUserImage" destination="Ufl-iJ-JOJ" id="tII-ed-OmE"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BasicInfoCell" rowHeight="50" id="Ao0-ea-32W" customClass="UserInfoTableViewCell" customModule="E_Legal" customModuleProvider="target">
