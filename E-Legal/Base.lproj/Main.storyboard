@@ -305,6 +305,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wxF-I0-9V7">
+                                                    <rect key="frame" x="158" y="194" width="98" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="98" id="V1y-Ea-xeh"/>
+                                                        <constraint firstAttribute="height" constant="98" id="cRA-bm-Rca"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZB-Lc-IS8">
                                                     <rect key="frame" x="139" y="189" width="136" height="133"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -703,6 +710,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Yyk-Ew-CGU" secondAttribute="trailing" constant="20" id="1it-zy-aLb"/>
+                                                <constraint firstItem="wxF-I0-9V7" firstAttribute="centerX" secondItem="npd-af-1B9" secondAttribute="centerX" id="3Ok-n0-k47"/>
                                                 <constraint firstItem="czu-lr-3ZY" firstAttribute="top" secondItem="qig-FQ-kEC" secondAttribute="bottom" constant="31" id="494-7O-xE3"/>
                                                 <constraint firstItem="OIH-63-NId" firstAttribute="top" secondItem="Yyk-Ew-CGU" secondAttribute="bottom" constant="23" id="4ff-V7-xli"/>
                                                 <constraint firstItem="HRg-K8-qWd" firstAttribute="top" secondItem="czu-lr-3ZY" secondAttribute="bottom" constant="23" id="4kh-85-BaZ"/>
@@ -727,6 +735,7 @@
                                                 <constraint firstItem="EMV-iL-R52" firstAttribute="top" secondItem="HRg-K8-qWd" secondAttribute="bottom" constant="75" id="OGt-Me-SU6"/>
                                                 <constraint firstAttribute="trailing" secondItem="EMV-iL-R52" secondAttribute="trailing" constant="102" id="QE7-iD-rj2"/>
                                                 <constraint firstItem="M1V-TF-jva" firstAttribute="leading" secondItem="npd-af-1B9" secondAttribute="leading" id="RYh-n3-K0a"/>
+                                                <constraint firstItem="wxF-I0-9V7" firstAttribute="top" secondItem="S4X-gW-ifm" secondAttribute="bottom" constant="66" id="SL9-XI-Dvh"/>
                                                 <constraint firstItem="FEo-Rq-8sc" firstAttribute="top" secondItem="UZB-Lc-IS8" secondAttribute="bottom" constant="41" id="SpT-jM-p9O"/>
                                                 <constraint firstItem="QJ6-qt-ujd" firstAttribute="top" secondItem="EMV-iL-R52" secondAttribute="bottom" constant="20" id="WVi-A5-LLv"/>
                                                 <constraint firstItem="OIH-63-NId" firstAttribute="leading" secondItem="npd-af-1B9" secondAttribute="leading" constant="20" id="X9q-yA-Wfz"/>
@@ -747,6 +756,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ImageViewUser" destination="wxF-I0-9V7" id="J04-e4-Iou"/>
                                             <outlet property="buttonAddPhoto" destination="UZB-Lc-IS8" id="VU3-dU-DAv"/>
                                             <outlet property="buttonCreateAccount" destination="EMV-iL-R52" id="Khg-gW-xGv"/>
                                             <outlet property="buttonGoBack" destination="eJW-eg-par" id="eq8-l6-3LU"/>
