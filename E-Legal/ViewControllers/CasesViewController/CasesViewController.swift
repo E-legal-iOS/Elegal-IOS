@@ -15,7 +15,7 @@ class CasesViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationController?.navigationBar.barTintColor = UIColor(red: 7 / 255, green: 134 / 255, blue: 231 / 255, alpha: 1.0)
+      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
       // Do any additional setup after loading the view.
    }
 

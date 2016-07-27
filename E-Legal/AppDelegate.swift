@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Override point for customization after application launch.
       UIApplication.sharedApplication().statusBarStyle = .LightContent
       IQKeyboardManager.sharedManager().enable = true
-      Parse.setApplicationId("", clientKey: "")
       return true
    }
 

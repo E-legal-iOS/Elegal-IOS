@@ -30,21 +30,16 @@ class ApplicationHelper: NSObject {
    }
 
    class func showAlertView(title: String, message: String, view: UIViewController) {
-
       let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-
       let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
 
       }
       alertController.addAction(cancelAction)
-
       let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
 
       }
       alertController.addAction(OKAction)
-
       view.presentViewController(alertController, animated: true) {
-
       }
    }
 }

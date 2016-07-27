@@ -20,6 +20,7 @@ public struct Constants {
    static let lawyerProfileSections = ["INFO", "DETAILS", "PRIVACY"]
    static let userProfileSections = ["INFO", "PRIVACY"]
    static let lawyerCategory = ["Snow White", "Space Gray", "Rose Gold", "Silver", "Gold", "Blue"]
-
 }
+
+
 

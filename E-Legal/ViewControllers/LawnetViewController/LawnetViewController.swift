@@ -15,7 +15,7 @@ class LawnetViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationController?.navigationBar.barTintColor = UIColor(red: 7 / 255, green: 134 / 255, blue: 231 / 255, alpha: 1.0)
+      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
       // Do any additional setup after loading the view.
    }
 
@@ -31,7 +31,6 @@ class LawnetViewController: UIViewController {
 }
 
 extension LawnetViewController: UITableViewDelegate, UITableViewDataSource {
-
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
       return 1
    }
@@ -47,8 +46,6 @@ extension LawnetViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension LawnetViewController: UISearchBarDelegate {
-
    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-
    }
 }
