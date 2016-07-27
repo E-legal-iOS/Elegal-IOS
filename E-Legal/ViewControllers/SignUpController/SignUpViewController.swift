@@ -51,8 +51,7 @@ class SignUpViewController: UIViewController {
 
    }
 
-   func openCamera()
-   {
+   func openCamera() {
       if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
          let picker = UIImagePickerController()
          picker.delegate = self
@@ -63,8 +62,7 @@ class SignUpViewController: UIViewController {
       }
    }
 
-   func openGallary()
-   {
+   func openGallary() {
       let picker = UIImagePickerController()
       picker.delegate = self
       picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
