@@ -233,11 +233,12 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension ProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
-        let chosenImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
-        editUserImageCell?.buttonEditUserImage.setBackgroundImage(chosenImage, forState: UIControlState.Normal)
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+
+   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+      if let chosenImage = (info[UIImagePickerControllerOriginalImage] as? UIImage) {
+         editUserImageCell?.buttonEditUserImage.setBackgroundImage(chosenImage, forState: UIControlState.Normal)
+      }
+      dismissViewControllerAnimated(true, completion: nil)
+   }
 }
 
