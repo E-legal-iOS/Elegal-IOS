@@ -45,7 +45,7 @@
 		46F0E0871D3FBA3400874871 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E0861D3FBA3400874871 /* UserInfoTableViewCell.swift */; };
 		46F0E0891D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E0881D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift */; };
 		46F0E08C1D3FC32000874871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0E08B1D3FC32000874871 /* HomeViewController.swift */; };
-		46F389EE1D49111F00FAB3BB /* ColorsConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F389ED1D49111F00FAB3BB /* ColorsConstans.swift */; };
+		46F389F01D49152600FAB3BB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F389EF1D49152600FAB3BB /* Colors.swift */; };
 		46F4DC871D46302600EFFA82 /* CreateCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4DC861D46302600EFFA82 /* CreateCaseViewController.swift */; };
 		46F4DC891D46358400EFFA82 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46F4DC881D46358400EFFA82 /* SF-UI-Display-Thin.otf */; };
 		46F4DC8C1D4636E700EFFA82 /* UITextViewFontClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F4DC8B1D4636E700EFFA82 /* UITextViewFontClass.swift */; };
@@ -121,7 +121,7 @@
 		46F0E0861D3FBA3400874871 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		46F0E0881D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		46F0E08B1D3FC32000874871 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		46F389ED1D49111F00FAB3BB /* ColorsConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsConstans.swift; sourceTree = "<group>"; };
+		46F389EF1D49152600FAB3BB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		46F4DC861D46302600EFFA82 /* CreateCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCaseViewController.swift; sourceTree = "<group>"; };
 		46F4DC881D46358400EFFA82 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		46F4DC8B1D4636E700EFFA82 /* UITextViewFontClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewFontClass.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 			children = (
 				4609AD081D40FD3A002341C0 /* Constants.swift */,
 				466CD51C1D4657FA00627A87 /* DefineMacros.swift */,
-				46F389ED1D49111F00FAB3BB /* ColorsConstans.swift */,
+				46F389EF1D49152600FAB3BB /* Colors.swift */,
 			);
 			path = Contsants;
 			sourceTree = "<group>";
@@ -777,6 +777,7 @@
 				4609AD141D411119002341C0 /* PrivacyTableViweCell.swift in Sources */,
 				4613FE741D3D0326002A8FCD /* AppDelegate.swift in Sources */,
 				466CD52F1D47C1C100627A87 /* LawnetTableViewCell.swift in Sources */,
+				46F389F01D49152600FAB3BB /* Colors.swift in Sources */,
 				462AF1D81D3D3F98004D1291 /* UITextFieldFontClass.swift in Sources */,
 				46F0E07F1D3FA3D700874871 /* SSASideMenu.swift in Sources */,
 				46F0E08C1D3FC32000874871 /* HomeViewController.swift in Sources */,
@@ -784,7 +785,6 @@
 				466CD52A1D47BADC00627A87 /* LawnetViewController.swift in Sources */,
 				46F4DC911D46452200EFFA82 /* CreateCaseTableViewCell.swift in Sources */,
 				4689A5111D3E731100476582 /* SignUpViewController.swift in Sources */,
-				46F389EE1D49111F00FAB3BB /* ColorsConstans.swift in Sources */,
 				466CD5271D4797A400627A87 /* PickerViewClass.swift in Sources */,
 				4609AD111D410943002341C0 /* DeleteButton.swift in Sources */,
 				4609AD091D40FD3A002341C0 /* Constants.swift in Sources */,

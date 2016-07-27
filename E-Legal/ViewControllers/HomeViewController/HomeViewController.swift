@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
       // Do any additional setup after loading the view, typically from a nib.
       navigationController?.navigationBarHidden = false
       view.backgroundColor = UIColor.whiteColor()
-      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
+      navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
    }
 
    @IBAction func showLeftMenu(sender: UIButton) {

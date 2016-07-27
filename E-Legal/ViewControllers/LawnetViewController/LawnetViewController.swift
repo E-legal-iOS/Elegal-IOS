@@ -15,7 +15,7 @@ class LawnetViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
+      navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
       // Do any additional setup after loading the view.
    }
 

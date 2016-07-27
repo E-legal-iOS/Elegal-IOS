@@ -15,7 +15,7 @@ class CreateCaseViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
+      navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
       if let pickerView = view as? PickerViewClass {
          pickerView.pickerView.delegate = self
       }

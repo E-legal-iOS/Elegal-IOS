@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
       navigationController?.navigationBarHidden = false
-      navigationController?.navigationBar.barTintColor = ColorsConstans.navigationBarColor
+      navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
    }
 
    @IBAction func showLeftMenu(sender: UIButton) {
