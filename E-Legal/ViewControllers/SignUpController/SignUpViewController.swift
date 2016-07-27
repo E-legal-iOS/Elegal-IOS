@@ -13,6 +13,7 @@ class SignUpViewController: UIViewController {
    @IBOutlet weak var signUpTableView: UITableView!
    let dobPicker = UIDatePicker()
    var signUpCell: SignUpTableViewCell?
+   var photoUrl: NSURL?
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
@@ -74,11 +75,7 @@ class SignUpViewController: UIViewController {
    }
 
    @IBAction func createAccount (sender: UIButton) {
-      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
-      let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
-      appDelegate?.window?.rootViewController = viewController
-
+      validateFields()
    }
 
    func dateOfBirthPicker () {
@@ -93,20 +90,67 @@ class SignUpViewController: UIViewController {
       signUpCell?.textFieldDateOfBirth.text = timeFormatter.stringFromDate(sender.date)
    }
 
+   func validateFields() {
+      var error = ""
+      if signUpCell?.textFieldName.text == "Please enter your Name!\n" {
+         error = error.stringByAppendingString("")
+      }
+      if signUpCell?.textFieldemail.text == "" {
+         error = error.stringByAppendingString("Please enter your Email!\n")
+      }
+      if signUpCell?.textFieldPassword.text == "" {
+         error = error.stringByAppendingString("Please enter Password!\n")
+      }
+      if signUpCell?.textFieldPhoneNumber.text == "" {
+         error = error.stringByAppendingString("Please enter your Phone Number!\n")
+      }
+      if signUpCell?.textFieldDateOfBirth.text == "" {
+         error = error.stringByAppendingString("Please enter Date of Birth!\n")
+      }
+      if signUpCell?.switchLawyer.on == true {
+         if signUpCell?.textFieldRegistrationNo.text == "" {
+            error = error.stringByAppendingString("Please enter your Registration Number!\n")
+         }
+         if signUpCell?.textFieldAreaOfPractice.text == "" {
+            error = error.stringByAppendingString("Please enter your Area of Practice!\n")
+         }
+      }
+      if error == "" {
+         signUpNewuser()
+      } else {
+         ApplicationHelper.showAlertView("Alert!", message: error, view: self)
+      }
+   }
+
    func signUpNewuser() {
-      let newUser = User()
+      let newUser = PFUser()
       newUser.username = signUpCell?.textFieldName.text
       newUser.password = signUpCell?.textFieldPassword.text
       newUser.email = signUpCell?.textFieldemail.text
+      newUser["phonePrimary"] = signUpCell?.textFieldPhoneNumber.text
+//      newUser["areaOfPractice"] = signUpCell?.textFieldAreaOfPractice.text
+//      newUser["isLawyer"] = signUpCell?.switchLawyer.on
+//      newUser["registrationNumber"] = signUpCell?.textFieldRegistrationNo.text
+//      newUser["dateOfBirth"] = signUpCell?.textFieldDateOfBirth.text
+      do {
+         newUser["photo"] = try PFFile(name: "photo", contentsAtPath: "\(photoUrl)")
+      } catch {
 
+      }
       // Sign up the user asynchronously
+      var Error = ""
       newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
          if ((error) != nil) {
-            ApplicationHelper.showAlertView("Error", message: "\(error)", view: self)
+            if let errorDescription = error?.localizedDescription {
+               Error = errorDescription
+            }
+            ApplicationHelper.showAlertView("Error", message: Error, view: self)
          } else {
-            ApplicationHelper.showAlertView("Success", message: "Signed Up", view: self)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-
+               let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+               let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
+               let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+               appDelegate?.window?.rootViewController = viewController
             })
          }
       })
@@ -159,6 +203,15 @@ extension SignUpViewController: UITextFieldDelegate {
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+//    let url: NSURL = info[UIImagePickerControllerReferenceURL] as! NSURL
+//    print(url.absoluteString)
+
+      let imageUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
+      let imageName = imageUrl.lastPathComponent
+      let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as String!
+      let photoURL = NSURL(fileURLWithPath: documentDirectory)
+      photoUrl = photoURL.URLByAppendingPathComponent(imageName!)
+
       if let choosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
          signUpCell?.ImageViewUser.image = choosenImage
          signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)

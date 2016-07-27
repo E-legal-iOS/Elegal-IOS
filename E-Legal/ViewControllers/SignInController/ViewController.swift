@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class ViewController: UIViewController {
 
    @IBOutlet weak var textFieldEmail: UITextField!
@@ -28,13 +28,45 @@ class ViewController: UIViewController {
    }
 
    @IBAction func login (sender: UIButton) {
-
+      validateFields()
    }
 
-   func isValidEmail(testStr: String) -> Bool {
-      let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-      let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-      return emailTest.evaluateWithObject(testStr)
+   func validateFields() {
+      var error = ""
+      if textFieldEmail.text == "" {
+         error = error.stringByAppendingString("Please enter your Email!\n")
+      } else {
+         if ApplicationHelper.isValidEmail(textFieldEmail.text!) == false {
+            error = error.stringByAppendingString("Email is incorrect!\n")
+         }
+      }
+      if textFieldPassword.text == "" {
+         error = error.stringByAppendingString("Please enter your Password!")
+      }
+      if error == "" {
+         signInUser ()
+      } else {
+         ApplicationHelper.showAlertView("Alert!", message: error, view: self)
+      }
+   }
+
+   func signInUser () {
+      PFUser.logInWithUsernameInBackground(textFieldEmail.text!, password: textFieldPassword.text!, block: {
+         (loggedInUser, error) in
+
+         if error == nil {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
+            let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = viewController
+         } else {
+            var errorMsg = "Unknown Error"
+            if let errorDescription = error?.localizedDescription {
+               errorMsg = errorDescription
+            }
+            ApplicationHelper.showAlertView("Login Failed", message: errorMsg, view: self)
+         }
+      })
    }
 
    override func didReceiveMemoryWarning() {

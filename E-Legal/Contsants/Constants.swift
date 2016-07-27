@@ -20,7 +20,8 @@ public struct Constants {
    static let lawyerProfileSections = ["INFO", "DETAILS", "PRIVACY"]
    static let userProfileSections = ["INFO", "PRIVACY"]
    static let lawyerCategory = ["Snow White", "Space Gray", "Rose Gold", "Silver", "Gold", "Blue"]
+   static let ParseApplicationId = "OXHH5oZIkJhROj6WUzV9RW7XbYzuDiSwlit9vlvT"
+   static let parseServerUrl = "https://elegal-parse-server.meghrajswami.com:1337/parse/"
+
 }
-
-
 
