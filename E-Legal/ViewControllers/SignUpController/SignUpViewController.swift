@@ -31,7 +31,44 @@ class SignUpViewController: UIViewController {
    }
 
    @IBAction func addPhoto (sender: UIButton) {
+      let alert: UIAlertController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+      let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openCamera()
+      }
+      let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openGallary()
+      }
+      let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+         UIAlertAction in
+      }
 
+      alert.addAction(cameraAction)
+      alert.addAction(gallaryAction)
+      alert.addAction(cancelAction)
+      presentViewController(alert, animated: true, completion: nil)
+
+   }
+
+   func openCamera()
+   {
+      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+         let picker = UIImagePickerController()
+         picker.delegate = self
+         picker.sourceType = UIImagePickerControllerSourceType.Camera
+         presentViewController(picker, animated: true, completion: nil)
+      } else {
+//            ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+      }
+   }
+
+   func openGallary()
+   {
+      let picker = UIImagePickerController()
+      picker.delegate = self
+      picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+      presentViewController(picker, animated: true, completion: nil)
    }
 
    @IBAction func signUpLinkedin (sender: UIButton) {
@@ -99,5 +136,15 @@ extension SignUpViewController: UITextFieldDelegate {
    func textFieldShouldReturn(textField: UITextField) -> Bool {
       textField.resignFirstResponder()
       return true
+   }
+}
+
+extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+      signUpCell?.ImageViewUser.image = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+      signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)
+      signUpCell?.buttonAddPhoto.setTitle("", forState: UIControlState.Normal)
+      dismissViewControllerAnimated(true, completion: nil)
    }
 }

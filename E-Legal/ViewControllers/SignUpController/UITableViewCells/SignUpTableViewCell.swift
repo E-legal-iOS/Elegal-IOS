@@ -11,6 +11,7 @@ import UIKit
 class SignUpTableViewCell: UITableViewCell {
 
    @IBOutlet weak var buttonAddPhoto: UIButton!
+   @IBOutlet var ImageViewUser: UIImageView!
    @IBOutlet weak var textFieldName: UITextFieldFontClass!
    @IBOutlet weak var textFieldemail: UITextFieldFontClass!
    @IBOutlet weak var textFieldPassword: UITextFieldFontClass!
@@ -22,5 +23,10 @@ class SignUpTableViewCell: UITableViewCell {
    @IBOutlet weak var buttonCreateAccount: UIButtonClass!
    @IBOutlet weak var buttonLinkedIn: UIButtonClass!
    @IBOutlet weak var buttonGoBack: UIButton!
+    
+    override func awakeFromNib() {
+        ImageViewUser.layer.cornerRadius = ImageViewUser.frame.size.height / 2
+        ImageViewUser.layer.masksToBounds = true
+    }
 
 }
