@@ -11,7 +11,6 @@ import UIKit
 class ProfileViewController: UIViewController {
 
    @IBOutlet weak var tableView: UITableView!
-   @IBOutlet weak var buttonMenu: UIButton!
    let isLawyer = false
    var editUserImageCell: EditUserProfilePhotoTableViewCell?
 
@@ -19,8 +18,11 @@ class ProfileViewController: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
       navigationController?.navigationBarHidden = false
-      navigationController?.navigationBar.barTintColor = UIColor(red: 7 / 255, green: 134 / 255, blue: 231 / 255, alpha: 1.0)
-      buttonMenu.addTarget(self, action: #selector(SSASideMenu.presentLeftMenuViewController), forControlEvents: UIControlEvents.TouchUpInside)
+      navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
+   }
+
+   @IBAction func showLeftMenu(sender: UIButton) {
+      presentLeftMenuViewController()
    }
 
    func editUserImage(indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,7 +60,7 @@ class ProfileViewController: UIViewController {
          picker.sourceType = UIImagePickerControllerSourceType.Camera
          presentViewController(picker, animated: true, completion: nil)
       } else {
-//         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
       }
    }
 

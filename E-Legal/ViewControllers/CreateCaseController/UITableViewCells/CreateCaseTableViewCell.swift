@@ -16,7 +16,7 @@ class CreateCaseTableViewCell: UITableViewCell {
    @IBOutlet weak var textFieldChooseCategory: UITextFieldFontClass!
    @IBOutlet weak var segmentExperience: UISegmentedControl!
    @IBOutlet weak var buttonSubmit: UIButtonClass!
-    
+
    override func awakeFromNib() {
       super.awakeFromNib()
       // Initialization code

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class SignUpViewController: UIViewController {
 
    @IBOutlet weak var signUpTableView: UITableView!
@@ -31,7 +31,42 @@ class SignUpViewController: UIViewController {
    }
 
    @IBAction func addPhoto (sender: UIButton) {
+      let alert: UIAlertController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+      let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openCamera()
+      }
+      let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.Default) {
+         UIAlertAction in
+         self.openGallary()
+      }
+      let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+         UIAlertAction in
+      }
 
+      alert.addAction(cameraAction)
+      alert.addAction(gallaryAction)
+      alert.addAction(cancelAction)
+      presentViewController(alert, animated: true, completion: nil)
+
+   }
+
+   func openCamera() {
+      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+         let picker = UIImagePickerController()
+         picker.delegate = self
+         picker.sourceType = UIImagePickerControllerSourceType.Camera
+         presentViewController(picker, animated: true, completion: nil)
+      } else {
+//            ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+      }
+   }
+
+   func openGallary() {
+      let picker = UIImagePickerController()
+      picker.delegate = self
+      picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+      presentViewController(picker, animated: true, completion: nil)
    }
 
    @IBAction func signUpLinkedin (sender: UIButton) {
@@ -39,11 +74,11 @@ class SignUpViewController: UIViewController {
    }
 
    @IBAction func createAccount (sender: UIButton) {
-
       let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
       let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
       let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
       appDelegate?.window?.rootViewController = viewController
+
    }
 
    func dateOfBirthPicker () {
@@ -56,6 +91,25 @@ class SignUpViewController: UIViewController {
       let timeFormatter = NSDateFormatter()
       timeFormatter.dateFormat = "MM-dd-yyyy"
       signUpCell?.textFieldDateOfBirth.text = timeFormatter.stringFromDate(sender.date)
+   }
+
+   func signUpNewuser() {
+      let newUser = User()
+      newUser.username = signUpCell?.textFieldName.text
+      newUser.password = signUpCell?.textFieldPassword.text
+      newUser.email = signUpCell?.textFieldemail.text
+
+      // Sign up the user asynchronously
+      newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+         if ((error) != nil) {
+            ApplicationHelper.showAlertView("Error", message: "\(error)", view: self)
+         } else {
+            ApplicationHelper.showAlertView("Success", message: "Signed Up", view: self)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+
+            })
+         }
+      })
    }
 
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -99,5 +153,17 @@ extension SignUpViewController: UITextFieldDelegate {
    func textFieldShouldReturn(textField: UITextField) -> Bool {
       textField.resignFirstResponder()
       return true
+   }
+}
+
+extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+      if let choosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+         signUpCell?.ImageViewUser.image = choosenImage
+         signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)
+         signUpCell?.buttonAddPhoto.setTitle("", forState: UIControlState.Normal)
+      }
+      dismissViewControllerAnimated(true, completion: nil)
    }
 }
