@@ -32,10 +32,5 @@ class SignUpTableViewCell: UITableViewCell {
    override func awakeFromNib() {
       ImageViewUser.layer.cornerRadius = ImageViewUser.frame.size.height / 2
       ImageViewUser.layer.masksToBounds = true
-      viewForAreaOfPractice.hidden = true
-      viewForRegistrationNo.hidden = true
-      constraintTopRegistrationNo.constant = 0
-      constraintTopAreaOfPractice.constant = 0
-      constraintTopbuttonCreateAccount.constant = 0
    }
 }

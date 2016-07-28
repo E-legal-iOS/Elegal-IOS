@@ -83,18 +83,18 @@ class SignUpViewController: UIViewController {
 
    @IBAction func switchLawyerButtonAction(sender: UISwitch) {
       if sender.on == true {
-         signUpCell?.viewForRegistrationNo.hidden = false
-         signUpCell?.viewForAreaOfPractice.hidden = false
-         signUpCell?.constraintTopRegistrationNo.constant = 31
-         signUpCell?.constraintTopAreaOfPractice.constant = 23
-         signUpCell?.constraintTopbuttonCreateAccount.constant = 75
+         setValuesForConstraints(31, areaOfPracticeConstraint: 23, buttonCreateAccountContraint: 75, hideViews: false)
       } else {
-         signUpCell?.viewForRegistrationNo.hidden = true
-         signUpCell?.viewForAreaOfPractice.hidden = true
-         signUpCell?.constraintTopRegistrationNo.constant = 0
-         signUpCell?.constraintTopAreaOfPractice.constant = 0
-         signUpCell?.constraintTopbuttonCreateAccount.constant = 0
+         setValuesForConstraints(0, areaOfPracticeConstraint: 0, buttonCreateAccountContraint: 0, hideViews: true)
       }
+   }
+
+   func setValuesForConstraints(registrationNoConstant: CGFloat, areaOfPracticeConstraint: CGFloat, buttonCreateAccountContraint: CGFloat, hideViews: Bool) {
+      signUpCell?.viewForRegistrationNo.hidden = hideViews
+      signUpCell?.viewForAreaOfPractice.hidden = hideViews
+      signUpCell?.constraintTopRegistrationNo.constant = registrationNoConstant
+      signUpCell?.constraintTopAreaOfPractice.constant = areaOfPracticeConstraint
+      signUpCell?.constraintTopbuttonCreateAccount.constant = buttonCreateAccountContraint
    }
 
    func dateOfBirthPicker() {
