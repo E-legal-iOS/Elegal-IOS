@@ -36,9 +36,9 @@ class ViewController: UIViewController {
       if textFieldEmail.text == "" {
          error = error.stringByAppendingString("Please enter your Email!\n")
       } else {
-         if ApplicationHelper.isValidEmail(textFieldEmail.text!) == false {
-            error = error.stringByAppendingString("Email is incorrect!\n")
-         }
+//         if ApplicationHelper.isValidEmail(textFieldEmail.text!) == false {
+//            error = error.stringByAppendingString("Email is incorrect!\n")
+//         }
       }
       if textFieldPassword.text == "" {
          error = error.stringByAppendingString("Please enter your Password!")

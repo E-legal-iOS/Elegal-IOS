@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LeftMenuViewController: UIViewController {
 
@@ -84,6 +85,12 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
          case 3:
             sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateCaseViewController")
             sideMenuViewController?.hideMenuViewController()
+         case 5:
+            PFUser.logOut()
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = viewController
          default:
             break
          }
