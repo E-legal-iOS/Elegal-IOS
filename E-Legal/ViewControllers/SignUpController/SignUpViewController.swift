@@ -27,11 +27,11 @@ class SignUpViewController: UIViewController {
       // Dispose of any resources that can be recreated.
    }
 
-   @IBAction func goBack (sender: UIButton) {
+   @IBAction func goBack(sender: UIButton) {
       navigationController?.popViewControllerAnimated(true)
    }
 
-   @IBAction func addPhoto (sender: UIButton) {
+   @IBAction func addPhoto(sender: UIButton) {
       let alert: UIAlertController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
       let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) {
          UIAlertAction in
@@ -70,7 +70,7 @@ class SignUpViewController: UIViewController {
       presentViewController(picker, animated: true, completion: nil)
    }
 
-   @IBAction func signUpLinkedin (sender: UIButton) {
+   @IBAction func signUpLinkedin(sender: UIButton) {
 
    }
 
@@ -78,7 +78,23 @@ class SignUpViewController: UIViewController {
       validateFields()
    }
 
-   func dateOfBirthPicker () {
+   @IBAction func switchLawyerButtonAction(sender: UISwitch) {
+      if sender.on == true {
+         setValuesForConstraints(31, areaOfPracticeConstraint: 23, buttonCreateAccountContraint: 75, hideViews: false)
+      } else {
+         setValuesForConstraints(0, areaOfPracticeConstraint: 0, buttonCreateAccountContraint: 0, hideViews: true)
+      }
+   }
+
+   func setValuesForConstraints(registrationNoConstant: CGFloat, areaOfPracticeConstraint: CGFloat, buttonCreateAccountContraint: CGFloat, hideViews: Bool) {
+      signUpCell?.viewForRegistrationNo.hidden = hideViews
+      signUpCell?.viewForAreaOfPractice.hidden = hideViews
+      signUpCell?.constraintTopRegistrationNo.constant = registrationNoConstant
+      signUpCell?.constraintTopAreaOfPractice.constant = areaOfPracticeConstraint
+      signUpCell?.constraintTopbuttonCreateAccount.constant = buttonCreateAccountContraint
+   }
+
+   func dateOfBirthPicker() {
       dobPicker.datePickerMode = UIDatePickerMode.Date
       dobPicker.maximumDate = NSDate()
       dobPicker.addTarget(self, action: #selector(SignUpViewController.handleDateOfBirthPicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
@@ -179,6 +195,7 @@ extension SignUpViewController: UITableViewDataSource, UITableViewDelegate {
       signUpCell.buttonLinkedIn.addTarget(self, action: #selector(SignUpViewController.signUpLinkedin(_:)), forControlEvents: UIControlEvents.TouchUpInside)
       signUpCell.buttonCreateAccount.addTarget(self, action: #selector(SignUpViewController.createAccount(_:)), forControlEvents: UIControlEvents.TouchUpInside)
       signUpCell.buttonGoBack.addTarget(self, action: #selector(SignUpViewController.goBack(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+      signUpCell.switchLawyer.addTarget(self, action: #selector(SignUpViewController.switchLawyerButtonAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
       signUpCell.textFieldDateOfBirth.inputView = dobPicker
       return signUpCell
    }
