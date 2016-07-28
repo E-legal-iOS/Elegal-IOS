@@ -6,9 +6,23 @@
 //  Copyright © 2016 Toqir Ahmad. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Parse
 
-class User: PFUser {
-    
+public class User: PFUser {
+
+   @NSManaged public var phoneNumber: NSNumber?
+   @NSManaged public var registrationNumber: NSNumber?
+   @NSManaged public var dateOfBirth: NSNumber?
+   @NSManaged public var areaOfPractice: String?
+   @NSManaged public var isLawyer: NSNumber?
+
+   override public class func initialize() {
+      struct Static {
+         static var onceToken: dispatch_once_t = 0;
+      }
+      dispatch_once(&Static.onceToken) {
+         self.registerSubclass()
+      }
+   }
 }

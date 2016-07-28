@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Override point for customization after application launch.
       UIApplication.sharedApplication().statusBarStyle = .LightContent
       IQKeyboardManager.sharedManager().enable = true
+      let parseConfiguration = ParseClientConfiguration {
+         $0.applicationId = Constants.ParseApplicationId
+         $0.clientKey = ""
+         $0.server = Constants.parseServerUrl
+         $0.localDatastoreEnabled = true
+      }
+      Parse.initializeWithConfiguration(parseConfiguration)
       return true
    }
 
