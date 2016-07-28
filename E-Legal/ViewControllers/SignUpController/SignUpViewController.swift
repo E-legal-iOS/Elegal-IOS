@@ -203,15 +203,13 @@ extension SignUpViewController: UITextFieldDelegate {
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
-//    let url: NSURL = info[UIImagePickerControllerReferenceURL] as! NSURL
-//    print(url.absoluteString)
-
-      let imageUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
-      let imageName = imageUrl.lastPathComponent
-      let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as String!
-      let photoURL = NSURL(fileURLWithPath: documentDirectory)
-      photoUrl = photoURL.URLByAppendingPathComponent(imageName!)
-
+      if let imageUrl = info[UIImagePickerControllerReferenceURL] as? NSURL {
+         if let imageName = imageUrl.lastPathComponent {
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as String!
+            let photoURL = NSURL(fileURLWithPath: documentDirectory)
+            photoUrl = photoURL.URLByAppendingPathComponent(imageName)
+         }
+      }
       if let choosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
          signUpCell?.ImageViewUser.image = choosenImage
          signUpCell?.buttonAddPhoto.setImage(nil, forState: UIControlState.Normal)
