@@ -10,6 +10,11 @@ import UIKit
 
 class SignUpTableViewCell: UITableViewCell {
 
+   @IBOutlet var constraintTopRegistrationNo: NSLayoutConstraint!
+   @IBOutlet var constraintTopAreaOfPractice: NSLayoutConstraint!
+   @IBOutlet var constraintTopbuttonCreateAccount: NSLayoutConstraint!
+   @IBOutlet weak var viewForRegistrationNo: UIView!
+   @IBOutlet weak var viewForAreaOfPractice: UIView!
    @IBOutlet weak var buttonAddPhoto: UIButton!
    @IBOutlet var ImageViewUser: UIImageView!
    @IBOutlet weak var textFieldName: UITextFieldFontClass!
@@ -23,10 +28,14 @@ class SignUpTableViewCell: UITableViewCell {
    @IBOutlet weak var buttonCreateAccount: UIButtonClass!
    @IBOutlet weak var buttonLinkedIn: UIButtonClass!
    @IBOutlet weak var buttonGoBack: UIButton!
-    
-    override func awakeFromNib() {
-        ImageViewUser.layer.cornerRadius = ImageViewUser.frame.size.height / 2
-        ImageViewUser.layer.masksToBounds = true
-    }
 
+   override func awakeFromNib() {
+      ImageViewUser.layer.cornerRadius = ImageViewUser.frame.size.height / 2
+      ImageViewUser.layer.masksToBounds = true
+      viewForAreaOfPractice.hidden = true
+      viewForRegistrationNo.hidden = true
+      constraintTopRegistrationNo.constant = 0
+      constraintTopAreaOfPractice.constant = 0
+      constraintTopbuttonCreateAccount.constant = 0
+   }
 }

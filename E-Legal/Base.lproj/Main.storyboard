@@ -761,6 +761,9 @@
                                             <outlet property="buttonCreateAccount" destination="EMV-iL-R52" id="Khg-gW-xGv"/>
                                             <outlet property="buttonGoBack" destination="eJW-eg-par" id="eq8-l6-3LU"/>
                                             <outlet property="buttonLinkedIn" destination="QJ6-qt-ujd" id="RuX-F2-amP"/>
+                                            <outlet property="constraintTopAreaOfPractice" destination="4kh-85-BaZ" id="mli-lu-GGf"/>
+                                            <outlet property="constraintTopRegistrationNo" destination="494-7O-xE3" id="Frn-WR-Zev"/>
+                                            <outlet property="constraintTopbuttonCreateAccount" destination="OGt-Me-SU6" id="jrU-K5-cbB"/>
                                             <outlet property="switchLawyer" destination="PXd-ll-ix1" id="0CE-tO-5dL"/>
                                             <outlet property="textFieldAreaOfPractice" destination="9nS-kf-KDa" id="oEo-Zu-ODQ"/>
                                             <outlet property="textFieldDateOfBirth" destination="8Um-Yf-8gv" id="UTe-P3-8Z7"/>
@@ -769,6 +772,8 @@
                                             <outlet property="textFieldPhoneNumber" destination="xO0-d7-FKQ" id="hM5-34-NQ8"/>
                                             <outlet property="textFieldRegistrationNo" destination="isG-E7-c67" id="JHT-8p-xc5"/>
                                             <outlet property="textFieldemail" destination="4yx-Ym-HO5" id="Hme-LE-6cV"/>
+                                            <outlet property="viewForAreaOfPractice" destination="HRg-K8-qWd" id="AXf-vi-LRw"/>
+                                            <outlet property="viewForRegistrationNo" destination="czu-lr-3ZY" id="MPx-qo-2rT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1450,7 +1455,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="wFw-KN-Krb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Practice Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYO-Qq-6R0">
@@ -1459,7 +1464,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="Q1Z-MO-BnK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-jV-dJl">
@@ -1468,7 +1473,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="QpU-lH-tMP"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZz-NZ-rTt">
@@ -1690,19 +1695,19 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-CN-pAx">
                                                     <rect key="frame" x="23" y="114" width="56" height="21"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d84-7Y-AkG">
                                                     <rect key="frame" x="23" y="8" width="34" height="21"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1E-70-xPh">
                                                     <rect key="frame" x="23" y="39" width="34" height="21"/>
                                                     <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsS-YE-LaN">
