@@ -49,7 +49,7 @@ class CreateCaseViewController: UIViewController {
       if error == "" {
          createCaseParseAPI()
       } else {
-         ApplicationHelper.showAlertView("Alert!", message: error, view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: error, onViewController: self)
       }
    }
 

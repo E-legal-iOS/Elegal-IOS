@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
          picker.sourceType = UIImagePickerControllerSourceType.Camera
          presentViewController(picker, animated: true, completion: nil)
       } else {
-         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: "You don't have camera.", onViewController: self)
       }
    }
 
