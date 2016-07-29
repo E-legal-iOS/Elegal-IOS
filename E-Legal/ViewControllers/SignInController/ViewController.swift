@@ -36,9 +36,9 @@ class ViewController: UIViewController {
       if textFieldEmail.text == "" {
          error = error.stringByAppendingString("Please enter your Email!\n")
       } else {
-         if ApplicationHelper.isValidEmail(textFieldEmail.text!) == false {
-            error = error.stringByAppendingString("Email is incorrect!\n")
-         }
+//         if ApplicationHelper.isValidEmail(textFieldEmail.text!) == false {
+//            error = error.stringByAppendingString("Email is incorrect!\n")
+//         }
       }
       if textFieldPassword.text == "" {
          error = error.stringByAppendingString("Please enter your Password!")
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
       if error == "" {
          signInUser ()
       } else {
-         ApplicationHelper.showAlertView("Alert!", message: error, view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: error, onViewController: self)
       }
    }
 
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             if let errorDescription = error?.localizedDescription {
                errorMsg = errorDescription
             }
-            ApplicationHelper.showAlertView("Login Failed", message: errorMsg, view: self)
+            ApplicationHelper.showAlertView(title: "Login Failed", message: errorMsg, onViewController: self)
          }
       })
    }

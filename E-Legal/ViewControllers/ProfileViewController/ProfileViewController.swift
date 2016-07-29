@@ -54,13 +54,13 @@ class ProfileViewController: UIViewController {
 
    func openCamera()
    {
-      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+      if UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
          let picker = UIImagePickerController()
          picker.delegate = self
          picker.sourceType = UIImagePickerControllerSourceType.Camera
          presentViewController(picker, animated: true, completion: nil)
       } else {
-         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: "You don't have camera.", onViewController: self)
       }
    }
 

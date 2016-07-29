@@ -53,13 +53,13 @@ class SignUpViewController: UIViewController {
    }
 
    func openCamera() {
-      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+      if UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
          let picker = UIImagePickerController()
          picker.delegate = self
          picker.sourceType = UIImagePickerControllerSourceType.Camera
          presentViewController(picker, animated: true, completion: nil)
       } else {
-//            ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: "You don't have camera.", onViewController: self)
       }
    }
 
@@ -134,7 +134,7 @@ class SignUpViewController: UIViewController {
       if error == "" {
          signUpNewuser()
       } else {
-         ApplicationHelper.showAlertView("Alert!", message: error, view: self)
+         ApplicationHelper.showAlertView(title: "Alert!", message: error, onViewController: self)
       }
    }
 
@@ -154,13 +154,9 @@ class SignUpViewController: UIViewController {
 
       }
       // Sign up the user asynchronously
-      var Error = ""
       newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-         if ((error) != nil) {
-            if let errorDescription = error?.localizedDescription {
-               Error = errorDescription
-            }
-            ApplicationHelper.showAlertView("Error", message: Error, view: self)
+         if let error = error {
+            ApplicationHelper.showAlertView(title: "Error", message: error.localizedDescription, onViewController: self)
          } else {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

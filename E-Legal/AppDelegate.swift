@@ -25,7 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          $0.localDatastoreEnabled = true
       }
       Parse.initializeWithConfiguration(parseConfiguration)
+      checkForUserLoggedIn()
       return true
+   }
+
+   func checkForUserLoggedIn() {
+      if PFUser.currentUser() != nil {
+         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
+         window?.rootViewController = viewController
+      }
+   }
+
+   func logout() {
+      PFUser.logOut()
+      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+      window?.rootViewController = viewController
    }
 
    func applicationWillResignActive(application: UIApplication) {

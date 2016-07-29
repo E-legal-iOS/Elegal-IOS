@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CreateCaseViewController: UIViewController {
 
@@ -28,6 +29,35 @@ class CreateCaseViewController: UIViewController {
 
    func donePicker() {
       createCaseCell?.textFieldChooseCategory.resignFirstResponder()
+   }
+
+   func validateFieldsForCreateCase() {
+      var error = ""
+      if createCaseCell?.textFieldTitle.text == "" {
+         error = error.stringByAppendingString("Please enter title!\n")
+      }
+      if createCaseCell?.textViewBrief.text == "" {
+         error = error.stringByAppendingString("Please enter brief!\n")
+      }
+//      if createCaseCell?.textViewDescription.text == "" {
+//         error = error.stringByAppendingString("Please enter description!\n")
+//      }
+//      if createCaseCell?.textFieldChooseCategory.text == "" {
+//         error = error.stringByAppendingString("Please choose category!")
+//      }
+
+      if error == "" {
+         createCaseParseAPI()
+      } else {
+         ApplicationHelper.showAlertView(title: "Alert!", message: error, onViewController: self)
+      }
+   }
+
+   func createCaseParseAPI() {
+      let createCase = PFObject(className: "Case")
+      createCase["title"] = createCaseCell?.textFieldTitle.text
+      createCase["brief"] = createCaseCell?.textViewBrief.text
+      createCase.saveInBackground()
    }
 
    override func didReceiveMemoryWarning() {
@@ -57,6 +87,7 @@ extension CreateCaseViewController: UITableViewDelegate, UITableViewDataSource {
          createCaseCell.textFieldChooseCategory.inputView = pickerView.pickerView
          createCaseCell.textFieldChooseCategory.inputAccessoryView = pickerView.toolBar
       }
+      createCaseCell.buttonSubmit.addTarget(self, action: #selector(CreateCaseViewController.validateFieldsForCreateCase), forControlEvents: UIControlEvents.TouchUpInside)
       return createCaseCell
    }
 }

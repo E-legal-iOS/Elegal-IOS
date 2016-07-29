@@ -29,7 +29,7 @@ class ApplicationHelper: NSObject {
       return size
    }
 
-   class func showAlertView(title: String, message: String, view: UIViewController) {
+   class func showAlertView(title title: String, message: String, onViewController: UIViewController) {
       let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
       let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
 
@@ -39,7 +39,7 @@ class ApplicationHelper: NSObject {
 
       }
       alertController.addAction(OKAction)
-      view.presentViewController(alertController, animated: true) {
+      onViewController.presentViewController(alertController, animated: true) {
       }
    }
 
