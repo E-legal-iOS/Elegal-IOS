@@ -53,7 +53,7 @@ class SignUpViewController: UIViewController {
    }
 
    func openCamera() {
-      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+      if UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
          let picker = UIImagePickerController()
          picker.delegate = self
          picker.sourceType = UIImagePickerControllerSourceType.Camera
@@ -156,7 +156,7 @@ class SignUpViewController: UIViewController {
       // Sign up the user asynchronously
       var Error = ""
       newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-         if ((error) != nil) {
+         if error != nil {
             if let errorDescription = error?.localizedDescription {
                Error = errorDescription
             }

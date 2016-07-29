@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController {
 
    func openCamera()
    {
-      if (UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+      if UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
          let picker = UIImagePickerController()
          picker.delegate = self
          picker.sourceType = UIImagePickerControllerSourceType.Camera

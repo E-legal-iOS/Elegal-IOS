@@ -17,8 +17,6 @@ class CreateCaseViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       navigationController?.navigationBar.barTintColor = Colors.navigationBarColor
-      let currentUser = PFUser.currentUser()
-      print(currentUser?.username)
       if let pickerView = view as? PickerViewClass {
          pickerView.pickerView.delegate = self
       }

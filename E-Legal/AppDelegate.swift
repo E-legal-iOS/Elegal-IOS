@@ -30,12 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    }
 
    func checkForUserLoggedIn() {
-      if (PFUser.currentUser() != nil) {
+      if PFUser.currentUser() != nil {
          let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
          let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
          let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
          appDelegate?.window?.rootViewController = viewController
       }
+   }
+
+   func logout() {
+      PFUser.logOut()
+      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+      let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+      appDelegate?.window?.rootViewController = viewController
    }
 
    func applicationWillResignActive(application: UIApplication) {
