@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController {
          picker.sourceType = UIImagePickerControllerSourceType.Camera
          presentViewController(picker, animated: true, completion: nil)
       } else {
-//            ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
+         ApplicationHelper.showAlertView("Alert", message: "You don't have camera", view: self)
       }
    }
 
@@ -154,13 +154,9 @@ class SignUpViewController: UIViewController {
 
       }
       // Sign up the user asynchronously
-      var Error = ""
       newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-         if error != nil {
-            if let errorDescription = error?.localizedDescription {
-               Error = errorDescription
-            }
-            ApplicationHelper.showAlertView("Error", message: Error, view: self)
+         if let error = error {
+            ApplicationHelper.showAlertView("Error", message: error.localizedDescription, view: self)
          } else {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
