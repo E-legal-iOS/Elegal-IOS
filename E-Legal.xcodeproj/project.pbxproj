@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		090CF1001D7C7EDC00E43399 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF0FF1D7C7EDC00E43399 /* Platform.swift */; };
+		090CF1061D7C876200E43399 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF1051D7C876200E43399 /* SettingsViewController.swift */; };
+		090CF1081D7C8A9B00E43399 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF1071D7C8A9B00E43399 /* SettingsTableViewCell.swift */; };
+		090CF10A1D7C8B0C00E43399 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF1091D7C8B0C00E43399 /* SectionHeader.swift */; };
+		090CF10C1D7C8B1C00E43399 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090CF10B1D7C8B1C00E43399 /* SectionHeader.xib */; };
+		090CF10F1D7CA6E900E43399 /* CaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF10E1D7CA6E900E43399 /* CaseDetailsViewController.swift */; };
+		090CF1111D7CAC8200E43399 /* CaseDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF1101D7CAC8200E43399 /* CaseDetailTableViewCell.swift */; };
+		090CF1131D7CAC8F00E43399 /* SubmitBidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090CF1121D7CAC8F00E43399 /* SubmitBidTableViewCell.swift */; };
 		4609AD041D40EF10002341C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609AD031D40EF10002341C0 /* ProfileViewController.swift */; };
 		4609AD091D40FD3A002341C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609AD081D40FD3A002341C0 /* Constants.swift */; };
 		4609AD0E1D41092F002341C0 /* UILabelFontClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609AD0B1D41092F002341C0 /* UILabelFontClass.swift */; };
@@ -78,6 +85,13 @@
 /* Begin PBXFileReference section */
 		00B9FF4ADE7AE1D279FD4C99 /* Pods_E_LegalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_LegalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		090CF0FF1D7C7EDC00E43399 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		090CF1051D7C876200E43399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		090CF1071D7C8A9B00E43399 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		090CF1091D7C8B0C00E43399 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		090CF10B1D7C8B1C00E43399 /* SectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
+		090CF10E1D7CA6E900E43399 /* CaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseDetailsViewController.swift; sourceTree = "<group>"; };
+		090CF1101D7CAC8200E43399 /* CaseDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseDetailTableViewCell.swift; sourceTree = "<group>"; };
+		090CF1121D7CAC8F00E43399 /* SubmitBidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitBidTableViewCell.swift; sourceTree = "<group>"; };
 		13C80293C702DFEB2D4EEFC8 /* Pods-E-Legal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Legal.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-Legal/Pods-E-Legal.release.xcconfig"; sourceTree = "<group>"; };
 		2C7012FC49832274E2832E33 /* Pods-E-LegalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-LegalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-LegalTests/Pods-E-LegalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4609AD031D40EF10002341C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +181,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090CF1021D7C873100E43399 /* Setings */ = {
+			isa = PBXGroup;
+			children = (
+				090CF1051D7C876200E43399 /* SettingsViewController.swift */,
+				090CF1071D7C8A9B00E43399 /* SettingsTableViewCell.swift */,
+				090CF1091D7C8B0C00E43399 /* SectionHeader.swift */,
+				090CF10B1D7C8B1C00E43399 /* SectionHeader.xib */,
+			);
+			name = Setings;
+			sourceTree = "<group>";
+		};
+		090CF10D1D7CA6D400E43399 /* Case Details */ = {
+			isa = PBXGroup;
+			children = (
+				090CF10E1D7CA6E900E43399 /* CaseDetailsViewController.swift */,
+				090CF1101D7CAC8200E43399 /* CaseDetailTableViewCell.swift */,
+				090CF1121D7CAC8F00E43399 /* SubmitBidTableViewCell.swift */,
+			);
+			name = "Case Details";
+			sourceTree = "<group>";
+		};
 		4609AD021D40EEFA002341C0 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +346,8 @@
 		462AF1C91D3D2882004D1291 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				090CF10D1D7CA6D400E43399 /* Case Details */,
+				090CF1021D7C873100E43399 /* Setings */,
 				4689A50C1D3E731100476582 /* SignInController */,
 				4689A50E1D3E731100476582 /* SignUpController */,
 				46F0E0801D3FADFA00874871 /* LeftMenuViewController */,
@@ -583,7 +620,7 @@
 				TargetAttributes = {
 					4613FE6F1D3D0326002A8FCD = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = TS9Z626TB2;
+						DevelopmentTeam = WR292SJY8R;
 					};
 					4613FE831D3D0326002A8FCD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -628,6 +665,7 @@
 				4613FE7B1D3D0326002A8FCD /* Assets.xcassets in Resources */,
 				4613FE791D3D0326002A8FCD /* Main.storyboard in Resources */,
 				466CD52C1D47BFC100627A87 /* MYRIADPRO-REGULAR.OTF in Resources */,
+				090CF10C1D7C8B1C00E43399 /* SectionHeader.xib in Resources */,
 				466CD5221D478EB300627A87 /* SF-UI-Display-Regular.otf in Resources */,
 				462AF1C21D3D1645004D1291 /* muli.regular.ttf in Resources */,
 				46F4DC8E1D4640EF00EFFA82 /* SF-UI-Display-Semibold.otf in Resources */,
@@ -790,12 +828,14 @@
 				46F0E08C1D3FC32000874871 /* HomeViewController.swift in Sources */,
 				46F389EC1D48FAFA00FAB3BB /* EditUserProfilePhotoTableViewCell.swift in Sources */,
 				466CD5321D47D24400627A87 /* User.swift in Sources */,
+				090CF1111D7CAC8200E43399 /* CaseDetailTableViewCell.swift in Sources */,
 				466CD52A1D47BADC00627A87 /* LawnetViewController.swift in Sources */,
 				46F4DC911D46452200EFFA82 /* CreateCaseTableViewCell.swift in Sources */,
 				4689A5111D3E731100476582 /* SignUpViewController.swift in Sources */,
 				466CD5271D4797A400627A87 /* PickerViewClass.swift in Sources */,
 				4609AD111D410943002341C0 /* DeleteButton.swift in Sources */,
 				4609AD091D40FD3A002341C0 /* Constants.swift in Sources */,
+				090CF1081D7C8A9B00E43399 /* SettingsTableViewCell.swift in Sources */,
 				4689A5041D3D450700476582 /* UIView.swift in Sources */,
 				466CD5251D47930700627A87 /* CasesTableViewCell.swift in Sources */,
 				46F0E0891D3FBA6600874871 /* LeftMenuOptionsTableViewCell.swift in Sources */,
@@ -805,9 +845,13 @@
 				4609AD1B1D411B17002341C0 /* EditProfileHeadeView.swift in Sources */,
 				4609AD041D40EF10002341C0 /* ProfileViewController.swift in Sources */,
 				466CD5201D478B1300627A87 /* CasesViewController.swift in Sources */,
+				090CF10F1D7CA6E900E43399 /* CaseDetailsViewController.swift in Sources */,
 				4689A5071D3D4FD700476582 /* ApplicationHelper.swift in Sources */,
 				4609AD0F1D41092F002341C0 /* UIButtonClass.swift in Sources */,
+				090CF1131D7CAC8F00E43399 /* SubmitBidTableViewCell.swift in Sources */,
+				090CF1061D7C876200E43399 /* SettingsViewController.swift in Sources */,
 				46F4DC871D46302600EFFA82 /* CreateCaseViewController.swift in Sources */,
+				090CF10A1D7C8B0C00E43399 /* SectionHeader.swift in Sources */,
 				466CD51D1D4657FA00627A87 /* DefineMacros.swift in Sources */,
 				4609AD161D4111B0002341C0 /* DeleteButtonTableViewCell.swift in Sources */,
 				4609AD0E1D41092F002341C0 /* UILabelFontClass.swift in Sources */,
@@ -954,7 +998,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: TechCreatix LLC (WR292SJY8R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "E-Legal/Info.plist";
@@ -962,7 +1007,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TechCreatix.E-Legal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dae6522c-818b-4cfc-9f9c-3013bb1ac77b";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Legal/ViewControllers/CreateCaseController/E-Legal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -974,7 +1019,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: TechCreatix LLC (WR292SJY8R)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "E-Legal/Info.plist";
@@ -982,7 +1028,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TechCreatix.E-Legal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dae6522c-818b-4cfc-9f9c-3013bb1ac77b";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Legal/ViewControllers/CreateCaseController/E-Legal-Bridging-Header.h";
 			};
 			name = Release;

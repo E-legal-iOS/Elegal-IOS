@@ -18,8 +18,9 @@ class ViewController: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
       navigationController?.navigationBarHidden = true
-      if  Platform.isSimulator {
-         textFieldEmail.text = "test@gmail.com"
+      if Platform.isSimulator {
+         textFieldEmail.text = "test12@gmail.com"
+         textFieldPassword.text = "12345678"
       }
    }
 

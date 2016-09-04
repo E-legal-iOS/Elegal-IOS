@@ -85,6 +85,9 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
          case 3:
             sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreateCaseViewController")
             sideMenuViewController?.hideMenuViewController()
+         case 4:
+            sideMenuViewController?.contentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Settings")
+            sideMenuViewController?.hideMenuViewController()
          case 5:
             let appDelegate = AppDelegate()
             appDelegate.logout()

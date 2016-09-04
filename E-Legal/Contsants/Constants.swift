@@ -20,6 +20,11 @@ public struct Constants {
    static let lawyerProfileSections = ["INFO", "DETAILS", "PRIVACY"]
    static let userProfileSections = ["INFO", "PRIVACY"]
    static let lawyerCategory = ["Snow White", "Space Gray", "Rose Gold", "Silver", "Gold", "Blue"]
+   static let profileSettings = ["EDIT PROFILE", "SEND PUSH NOTIFICATIONS", "REFRESH AUTOMATICALLY"]
+   static let networkSettings = ["LINKEDIN"]
+   static let supportSettings = ["HELP", "FAQ"]
+   static let settingsHeader = ["PROFILE SETTINGS", "NETWORK", "SUPPORT"]
+   static let caseDetail = ["TITLE", "FULL DETAIL", "USERNAME SUBMITTED"]
    static let ParseApplicationId = "OXHH5oZIkJhROj6WUzV9RW7XbYzuDiSwlit9vlvT"
    static let parseServerUrl = "https://elegal-parse-server.meghrajswami.com:1337/parse/"
 

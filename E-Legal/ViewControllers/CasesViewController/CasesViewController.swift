@@ -43,6 +43,10 @@ extension CasesViewController: UITableViewDelegate, UITableViewDataSource {
       let caseCell = tableView.dequeueReusableCellWithIdentifier("CaseTableCell", forIndexPath: indexPath) as! CasesTableViewCell
       return caseCell
    }
+   
+   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      performSegueWithIdentifier("caseDetails", sender: nil)
+   }
 }
 
 extension CasesViewController: UISearchBarDelegate {
