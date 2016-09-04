@@ -1,18 +1,21 @@
 PODS:
-  - Bolts/Tasks (1.7.0)
-  - IQKeyboardManagerSwift (4.0.3)
-  - Parse (1.13.0):
-    - Bolts/Tasks (~> 1.6)
+  - Bolts/Tasks (1.8.4)
+  - DeviceKit (0.3.4)
+  - IQKeyboardManagerSwift (4.0.5)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
 
 DEPENDENCIES:
+  - DeviceKit (~> 0.3.4)
   - IQKeyboardManagerSwift
   - Parse
 
 SPEC CHECKSUMS:
-  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
-  IQKeyboardManagerSwift: b6883b720b0e76473692fdc80828442566e1075f
-  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  DeviceKit: b414b210c225ae19b77a47e64cb04f187c1c4f9a
+  IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
 
-PODFILE CHECKSUM: 21fcf641db1e31cc1593f32bee6933f3a65033a9
+PODFILE CHECKSUM: a86c5a76157acc80abc209af881731bafce2db81
 
 COCOAPODS: 1.0.1
