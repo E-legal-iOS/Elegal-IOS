@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+
 class ViewController: UIViewController {
 
    @IBOutlet weak var textFieldEmail: UITextField!
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
       navigationController?.navigationBarHidden = true
+      if  Platform.isSimulator {
+         textFieldEmail.text = "test@gmail.com"
+      }
    }
 
    @IBAction func createAccount (sender: UIButton) {

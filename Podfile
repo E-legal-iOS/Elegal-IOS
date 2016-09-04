@@ -6,8 +6,7 @@ target 'E-Legal' do
    # Comment this line if you're not using Swift and don't want to use dynamic frameworks
 use_frameworks!
 pod 'IQKeyboardManagerSwift'
-pod 'Parse'
-pod 'DeviceKit', '~> 0.3.4'
+pod 'Parse', '1.14.0'
 
   # Pods for E-Legal
   target 'E-LegalTests' do

@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
          let viewController = mainStoryboard.instantiateViewControllerWithIdentifier("SSASideMenu") as! SSASideMenu
          window?.rootViewController = viewController
-      }
+      } 
    }
 
    func logout() {
